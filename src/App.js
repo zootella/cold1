@@ -1,25 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
 
+import React from 'react';
+import { useEffect, useState } from 'react';
+
+const EmailForm = () => {
+
+	const [email, setEmail] = useState("");
+	const [feedback, setFeedback] = useState("Enter text for feedback");
+
+	const onButtonSend = e => {
+		e.preventDefault();
+		console.log(email);
+	};
+
+	function onEmailChange(event) {
+		setFeedback(`You have entered ${event.target.value.length} characters`)
+		setEmail(event.target.value);
+	}
+
+	return (
+		<div>
+			<form onSubmit={onButtonSend}>
+				<p>
+					<label>Email: <input type="text" name="email" value={email} onChange={onEmailChange} /></label>
+					<button>Send</button>
+				</p>
+				<p>{feedback}</p>
+			</form>
+		</div>
+	);
+};
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<p>Hello, cold1.cc! version 2023oct12a</p>
+			<EmailForm />
+		</div>
+	);
 }
 
 export default App;
