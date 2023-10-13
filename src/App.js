@@ -1,8 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-import React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const EmailForm = () => {
 
@@ -35,7 +34,7 @@ const EmailForm = () => {
 function App() {
 	return (
 		<div className="App">
-			<p>Hello, cold1.cc! version 2023oct13b</p>
+			<p>Hello, cold1.cc! version 2023oct13d</p>
 			<EmailForm />
 		</div>
 	);
