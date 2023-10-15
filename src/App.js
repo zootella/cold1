@@ -34,7 +34,7 @@ const EmailForm = () => {
 function App() {
 	return (
 		<div className="App">
-			<p>Hello, cold1.cc! version 2023oct13d</p>
+			<p>Hello, cold1.cc! version 2023oct15a</p>
 			<EmailForm />
 		</div>
 	);
